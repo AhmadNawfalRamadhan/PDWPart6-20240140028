@@ -142,6 +142,7 @@
 
 /* tombol warning */
 button {
+    font-family: 'kaisei tokumin', serif;
     background: linear-gradient(45deg, #ff0000, #ff4d4d);
     border: none;
     color: white;
@@ -168,7 +169,7 @@ button:active {
 
 /* ===== GLOBAL STYLE ===== */
 body {
-    font-family: 'Roboto', 'Open Sans', sans-serif;
+    font-family: 'kaisei tokumin', serif;
 
     background: linear-gradient(
         135deg,
