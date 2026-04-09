@@ -1,0 +1,241 @@
+.video-container {
+    text-align: center;
+}
+
+.playlist {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.playlist video {
+    cursor: pointer;
+    border: 2px solid #ccc;
+}
+
+.playlist video:hover {
+    border: 2px solid red;
+}
+
+.playlist video {
+    width: 120px;
+    height: 120px;      /* paksa tinggi sama */
+    object-fit: cover;  /* biar tidak gepeng */
+}
+
+
+
+
+/* ===== CONTAINER GAMBAR ===== */
+.music-player {
+    width: 420px;
+    height: 350px;
+    margin: 20px auto;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative; /* 👉 penting buat overlay */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+}
+
+/* GAMBAR */
+.bg-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background-color: black;              /* 👉 biar full */
+    
+}
+
+/* ===== PLAYER BAR (OVERLAY BAWAH) ===== */
+.player-bar {
+    position: absolute;
+    bottom: 10px; /* 🔥 overlay diturunin */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+
+    padding: 15px;
+
+    background: linear-gradient(
+        to top,
+        rgba(0,0,0,0.7),
+        rgba(0,0,0,0.2),
+        transparent
+    );
+
+    backdrop-filter: blur(6px);
+    color: white;
+}
+
+/* TEXT */
+.player-bar h3 {
+    font-size: 20px;
+    margin: 0;
+}
+
+.player-bar p {
+    font-size: 15px;
+    color: #aaa;
+    margin-bottom: 8px;
+}
+
+/* ===== CONTROLS ===== */
+.controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 90%;
+    margin: auto;
+}
+
+/* PLAY BUTTON */
+#playBtn {
+    width: 35px;
+    height: 35px;
+    min-width: 35px;
+    min-height: 35px;
+    border-radius: 50%;
+    border: none;
+    background: #ff0000;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.2s;
+    margin: 0 auto;
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#playBtn:hover {
+    transform: scale(1.1);
+}
+
+/* PROGRESS BAR */
+#progress {
+    flex: 1;
+    height: 3px;
+    appearance: none;
+    background: #f50000;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* BULATAN */
+#progress::-webkit-slider-thumb {
+    appearance: none;
+    width: 8px;
+    height: 8px;
+    background: #fdfdfd;
+    border-radius: 50%;
+}
+
+/* TIME */
+#currentTime,
+#duration {
+    font-size: 15px;
+    color: #ccc;
+}
+
+/* tombol warning */
+button {
+    background: linear-gradient(45deg, #ff0000, #ff4d4d);
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-top: 10px;
+    
+    box-shadow: 0 5px 15px rgba(255, 0, 0, 0.4);
+    transition: all 0.3s ease;
+}
+
+/* hover effect */
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(255, 0, 0, 0.6);
+}
+
+/* klik effect */
+button:active {
+    transform: scale(0.95);
+}
+
+/* ===== GLOBAL STYLE ===== */
+body {
+    font-family: 'Roboto', 'Open Sans', sans-serif;
+
+    background: linear-gradient(
+        135deg,
+        #ffffff 0%,
+        #ffe5e5 40%,
+        #ffcccc 70%,
+        #ffffff 100%
+    );
+
+    min-height: 100vh;
+}
+/* judul */
+h1 {
+    color: #cc0000;
+    margin-top: 20px;
+}
+
+h2 {
+    color: #b30000;
+}
+
+/* list biar lebih rapi */
+ul {
+    padding: 0;
+}
+
+li {
+    list-style: none;
+    margin-bottom: 40px;
+}
+
+/* garis hr lebih halus */
+hr {
+    border: none;
+    height: 2px;
+    background: linear-gradient(to right, #ff0000, transparent);
+    width: 60%;
+    margin: 10px auto;
+}
+
+.player-bar {
+    background: linear-gradient(
+        to top,
+        rgba(0,0,0,0.6),
+        rgba(0,0,0,0.1),
+        transparent
+    );
+}
+
+#mainVideo {
+    pointer-events: none; /* 🔥 disable klik */
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+#mainVideo::-webkit-media-controls {
+    display: none !important;
+}
+
+/* image jadi soft & clean */
+picture img {
+    border-radius: 12px;
+
+    filter: 
+        brightness(0.95)   /* sedikit redup */
+        contrast(0.9)      /* turunin kontras */
+        saturate(0.9);     /* warna lebih kalem */
+
+    transition: 0.3s ease;
+}

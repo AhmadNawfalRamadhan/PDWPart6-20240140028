@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Multimedia</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <center>
+        <img src="Songvideo/510-5101306_thumb-image-inuyasha-logo-hd-png-download-removebg-preview.png" alt="Logo Inuyasha" width="350" height="200">
+        <hr>
+        <ul>
+
+        <li>
+            <h2 id="image">Image Inuyasha</h2>
+            <hr>
+            <div class="image-container">
+            <picture>
+                <source media="(max-width: 600px)" srcset="https://static0.cbrimages.com/wordpress/wp-content/uploads/2020/05/pjimage-1-1.jpg?q=50&fit=crop&w=825&dpr=1.5">
+                <img src="https://static0.cbrimages.com/wordpress/wp-content/uploads/2020/05/pjimage-1-1.jpg?q=50&fit=crop&w=825&dpr=1.5" alt="Inuyasha" width="600" height="350">
+            </picture>
+            </div>
+            <button onclick="peringatan3()">ABOUT</button>
+        </li>
+
+        <li>
+            <h2 id="video">Video Inuyasha</h2>
+            <hr>
+            <div class="video-container">
+            <!-- VIDEO UTAMA (DIUBAH) -->
+            <video id="mainVideo" loop autoplay muted preload="auto">
+                <source src="Songvideo/Inuyasha Opening 1 Creditless (4K AI Upscaled & Enhanced).mp4" type="video/mp4">
+            </video>
+
+                <!-- VIDEO KECIL (DITAMBAH) -->
+                <div class="playlist">
+                    <video onclick="gantiVideo(this)" width="100" loop autoplay muted preload="auto">
+                        <source src="Songvideo/ssstik.io_@inuyashasfeet_1775658912787.mp4" type="video/mp4">
+                    </video>
+
+                    <video onclick="gantiVideo(this)" width="100" loop autoplay muted preload="auto">
+                        <source src="Songvideo/ssstik.io_@inuyashaedit_1775654697969.mp4" type="video/mp4">
+                    </video>
+
+                    <video onclick="gantiVideo(this)" width="100" loop autoplay muted preload="auto">
+                        <source src="Songvideo/ssstik.io_@inuyashasfeet_1775657150997.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <button onclick="peringatan1()">ABOUT</button>
+            
+            <li>
+                <h2 id="judulAudio">Audio Inuyasha</h2>
+                <hr>
+                <div class="music-player">
+
+                    <div class="image-wrapper">
+                        <img src="Songvideo/Screenshot 2026-04-08 232827.png" class="bg-img">
+                    </div>
+
+                    <div class="player-bar">
+
+                        <h3>Change The World</h3>
+                        <p>Inuyasha Opening</p>
+
+                        <!-- AUDIO (hidden) -->
+                        <audio id="audio">
+                            <source src="Songvideo/CHANGE THE WORLD_spotdown.org.mp3" type="audio/mpeg">
+                        </audio>
+
+                        <!-- CUSTOM PLAYER -->
+                        <div class="controls">
+                            <button id="playBtn">▶</button>
+
+                            <span id="currentTime">0:00</span>
+
+                            <input type="range" id="progress" value="0" max="100">
+
+                            <span id="duration">0:00</span>
+
+                        </div>
+                    </div>
+                </div>
+                <button onclick="peringatan2()">ABOUT</button>
+            </li>
+        </ul>
+
+    </center>
+
+    <script src="app.js"></script>
+</body>
+</html>
